@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="c3e1d299-56c7-4434-94da-93e34e1a33a6" created="3.65.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="REST Project 1" projectVersion="" updated="3.65.0 2026-01-22T10:17:35Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="295dcb2e-6923-42a6-97d4-ae1208875d74" lastUpdated="2026-02-10T06:39:38.350+05:30" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://ipwhois.app" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings id="e3d43713-e1f4-42e1-8c10-cc59e6290199"/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://ipwhois.app</con:endpoint>
+    </con:endpoints>
+    <con:resource name="IP" path="/json/{IP}" id="cb7729d7-b4f1-41e2-b8cd-071fdb0c85e2">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="IP" id="61fba34f-d30f-42aa-8610-ce28874cda69" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>403</con:status>
+          <con:params/>
+          <con:element xmlns:ipw="http://ipwhois.app/">ipw:Fault</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="1144ff7c-3885-4b91-9604-eab424353242" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://ipwhois.app</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="3f979e4e-701a-436d-9474-8d4847786892" name="http://ipwhois.app Test Suite">
+    <con:settings id="e87cc636-6e5a-4e61-8660-b08c3757b4c2"/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="64ae2f06-9c58-423e-ab08-b45890570968" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="http://ipwhois.app Test Case 1" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="datasource" name="Data Source" id="9f616cb2-e46a-4711-9fea-23bc6a44bc79">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Data Generator">
+            <con:configuration>
+              <generatedDataCount>10</generatedDataCount>
+              <generatorsTotalNumber>1</generatorsTotalNumber>
+              <lastSelectedProperty>-1</lastSelectedProperty>
+              <GeneratorType0>COMP</GeneratorType0>
+              <PropertyName0>Form editor is not applicable for this request</PropertyName0>
+              <repetitionCountForm65feafdafb914690a8e66857360ff285editor65feafdafb914690a8e66857360ff285is65feafdafb914690a8e66857360ff285not65feafdafb914690a8e66857360ff285applicable65feafdafb914690a8e66857360ff285for65feafdafb914690a8e66857360ff285this65feafdafb914690a8e66857360ff285request>0</repetitionCountForm65feafdafb914690a8e66857360ff285editor65feafdafb914690a8e66857360ff285is65feafdafb914690a8e66857360ff285not65feafdafb914690a8e66857360ff285applicable65feafdafb914690a8e66857360ff285for65feafdafb914690a8e66857360ff285this65feafdafb914690a8e66857360ff285request>
+              <repeatValuesForm65feafdafb914690a8e66857360ff285editor65feafdafb914690a8e66857360ff285is65feafdafb914690a8e66857360ff285not65feafdafb914690a8e66857360ff285applicable65feafdafb914690a8e66857360ff285for65feafdafb914690a8e66857360ff285this65feafdafb914690a8e66857360ff285request>false</repeatValuesForm65feafdafb914690a8e66857360ff285editor65feafdafb914690a8e66857360ff285is65feafdafb914690a8e66857360ff285not65feafdafb914690a8e66857360ff285applicable65feafdafb914690a8e66857360ff285for65feafdafb914690a8e66857360ff285this65feafdafb914690a8e66857360ff285request>
+              <ComputerAddressTypeForm65feafdafb914690a8e66857360ff285editor65feafdafb914690a8e66857360ff285is65feafdafb914690a8e66857360ff285not65feafdafb914690a8e66857360ff285applicable65feafdafb914690a8e66857360ff285for65feafdafb914690a8e66857360ff285this65feafdafb914690a8e66857360ff285request>IPv4</ComputerAddressTypeForm65feafdafb914690a8e66857360ff285editor65feafdafb914690a8e66857360ff285is65feafdafb914690a8e66857360ff285not65feafdafb914690a8e66857360ff285applicable65feafdafb914690a8e66857360ff285for65feafdafb914690a8e66857360ff285this65feafdafb914690a8e66857360ff285request>
+              <escapeSpaceSequence>65feafdafb914690a8e66857360ff285</escapeSpaceSequence>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>false</con:shared>
+          <con:restartShared>false</con:restartShared>
+          <con:property>Form editor is not applicable for this request</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+          <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request 1" id="e8cff765-47f9-4063-83d7-ad1db39a9f8c">
+        <con:settings/>
+        <con:config service="http://ipwhois.app" resourcePath="/json/{IP}" methodName="IP" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="1144ff7c-3885-4b91-9604-eab424353242" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://ipwhois.app</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://ipwhois.app/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="d55a97ac-3c2e-4855-8c42-070274b00276" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="e70e33fb-d78a-455f-984c-85b7ce91e2ef" name="JSONPath Match">
+              <con:configuration>
+                <path>$['city']</path>
+                <content/>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="Data Source Loop" id="8014f4dd-56dc-41f0-ad65-ef0adab1af82">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>Data Source</dataSourceStep>
+          <targetStep>Request 1</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="Data Sink" id="7183b65e-d34d-44b9-bc8d-09f100a7cc93">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="JDBC">
+            <con:configuration>
+              <driver>com.mysql.jdbc.Driver</driver>
+              <connstr>jdbc:mysql://db4free.net:3306/fstm1db?user=fstm1db&amp;password=PASS_VALUE</connstr>
+              <pass>6Y6NowPybq</pass>
+              <Connection>&lt;None></Connection>
+              <query/>
+              <stored-procedure>false</stored-procedure>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties/>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
